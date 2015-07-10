@@ -1,0 +1,17 @@
+# Site settings
+title: Tommy bloggt aus der IDE
+email: tommy-muehle@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Hallo, ich bin Tommy.
+  Ich bin Entwickler, Ehemann, ein wenig Nerd mit einer Vorliebe für Technik, Fussball, Filme und gutes Essen.
+  Hier findet ihr hin und wieder was mich in meinem Arbeitsalltag so beschäftigt.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://tommy-muehle.github.io" # the base hostname & protocol for your site
+twitter_username: tommy_muehle
+github_username: tommy-muehle
+
+# Build settings
+markdown: kramdown
+timezone: Europe/Berlin
+gems:
+  - jemoji
