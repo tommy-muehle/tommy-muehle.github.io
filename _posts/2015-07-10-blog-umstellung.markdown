@@ -8,7 +8,7 @@ categories: BLOG JEKYLL
 Lange Zeit war es in diesem Bereich sehr ruhig. Unter anderem auch, 
 da mein eigenes Blog-System auf Basis von [Silex](http://silex.sensiolabs.org/){:target="_blank"}
 doch sehr der Experimentierfreude bzgl. PHP 7, Redis usw. zum Opfer gefallen ist, was die Jenkins-Builds brach, ein Deployment verhinderte 
-und schlussendlich zum kompletten Stillstand führte.
+und schlussendlich zum kompletten Stillstand führte. :disappointed:
 
 Daher beschloss ich in ein stabileres System zu wechseln. Und das sollte definitiv kein Wordpress sein.
 Immerhin habe ich noch ein wenig (PHP-)Stolz [@netzmensch](https://twitter.com/netzmensch).
