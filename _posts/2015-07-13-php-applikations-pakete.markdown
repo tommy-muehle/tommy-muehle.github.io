@@ -10,7 +10,9 @@ erwähnte er beiläufig, man könne doch als Resultat eines Builds der CI ein RP
 welches dann zum Produktiv-System übertragen und installiert wird.
 
 Ein Thema, welches mich nicht so richtig losgelassen hat. Die Vorstellung unsere (Symfony2-) Applikationen 
-versioniert und geprüft zu packen und dann zu deployen fande ich extrem spannend.
+versioniert und geprüft zu packen und dann als eine Datei zu deployen fande ich extrem spannend.
+
+Aktuell ist der Synchronisationsprozess und die Release-Nachbereitung bei uns doch noch etwas aufwändiger.
 
 ### Spannendes Thema
 
@@ -18,7 +20,7 @@ In den letzten Tagen habe ich dazu ziemlich viel recherchiert und probiert.
 Erste Versuche mit [rpmbuild](http://www.rpm.org/max-rpm-snapshot/rpmbuild.8.html){:target="_blank"} und mit zahlreichen [Snippets](https://gist.github.com/catchamonkey/8575619f450fe4c94acd){:target="_blank"} 
 und [Tutorials](http://www.sme-server.de/download/Howtos/RPM-Build/Beginners_Guide_Own_RPMs.htm){:target="_blank"} führten aber nicht so richtig zum Ziel.
 
-Vorab war ich bereits auf [FPM](https://github.com/jordansissel/fpm){:target="_blank"} gestoßen. 
+Vorab war ich bereits auf [FPM](https://github.com/jordansissel/fpm){:target="_blank"} - Effing Package Management gestoßen. 
 Doch die vielen Optionen inkl. Support mehrerer Paket-Typen je nach Distribution befand ich zu Beginn viel zuviel,
 so dass ich davon Abstand genommen hatte. :weary:
 
@@ -163,8 +165,8 @@ rpm -ivh my_application-1.0-1.noarch.rpm
 
 ### Ausbaufähig
 
-Das Ganze ist jetzt natürlich noch sehr ausbaufähig und ist wie geschrieben nur ein Ansatz. 
-Beispielsweise fehlen in dem Beispiel noch die Abhängigkeiten (depends). Auch die Version könnte
+Das Ganze ist jetzt natürlich noch sehr ausbaufähig und bildet auch noch nicht den genannten Anwendungsfall ab.
+Aber es ist wie geschrieben ein Ansatz. Es fehlen beispielsweise noch die Abhängigkeiten (depends). Auch die Version könnte
 noch automatisch aus dem Git gezogen werden. Weiterhin müssten die Skripte (before- und after-install) noch auf die jeweiligen Environments angepasst werden.
 
 ### Live-Beispiel
