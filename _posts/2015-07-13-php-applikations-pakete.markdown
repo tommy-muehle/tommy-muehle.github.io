@@ -175,6 +175,11 @@ Für meine eigene Website auf Basis von [Silex](http://silex.sensiolabs.org/){:t
 [hiermit](https://github.com/tommy-muehle/tommy-muehle.de/blob/master/build/release.xml){:target="_blank"}
 aber bereits ein DEB Paket für das Deployment. Natürlich ist dies jedoch eine sehr simple Applikation.
 
+### Ausblick
+
+Wer nicht die Pakete händisch auf die Systeme übertragen und installieren möchte, kann natürlich auch einen
+eigenen Release-Server aufsetzen, von welchem sich die Applikations-Server die neuesten Versionen ziehen.
+
 #### Links
 
 * [[FPM]](https://github.com/jordansissel/fpm){:target="_blank"}
