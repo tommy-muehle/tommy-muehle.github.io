@@ -5,12 +5,12 @@ date:   2015-07-13 12:10:00
 categories: PHP FPM SYMFONY
 ---
 
-Als [Sebastian Bergmann](https://twitter.com/s_bergmann){:target="_blank"} vor ein paar Tagen bei uns war
+Als [Sebastian Bergmann](https://twitter.com/s_bergmann){:target="_blank"} vor ein paar Tagen bei uns war,
 erwähnte er beiläufig, man könne doch als Resultat eines Builds der CI ein RPM oder DEB der Applikation auswerfen,
 welches dann zum Produktiv-System übertragen und installiert wird.
 
 Ein Thema, welches mich nicht so richtig losgelassen hat. Die Vorstellung unsere (Symfony2-) Applikationen 
-versioniert und geprüft zu packen und dann als eine Datei zu deployen fande ich extrem spannend.
+versioniert und geprüft zu packen und dann als eine Datei zu deployen, fande ich extrem spannend.
 
 Aktuell ist der Synchronisationsprozess und die Release-Nachbereitung bei uns doch noch etwas aufwändiger.
 
@@ -21,15 +21,15 @@ Erste Versuche mit [rpmbuild](http://www.rpm.org/max-rpm-snapshot/rpmbuild.8.htm
 und [Tutorials](http://www.sme-server.de/download/Howtos/RPM-Build/Beginners_Guide_Own_RPMs.htm){:target="_blank"} führten aber nicht so richtig zum Ziel.
 
 Vorab war ich bereits auf [FPM](https://github.com/jordansissel/fpm){:target="_blank"} - Effing Package Management gestoßen. 
-Doch die vielen Optionen inkl. Support mehrerer Paket-Typen je nach Distribution befand ich zu Beginn viel zuviel,
-so dass ich davon Abstand genommen hatte. :weary:
+Doch die vielen Optionen inkl. Support mehrerer Paket-Typen je nach Distribution befand ich zu Beginn viel zu viel,
+sodass ich davon Abstand genommen hatte. :weary:
 
 Da die Versuche mit meinem Spec-File und meiner simplen Symfony Konsolen-App dann aber auch nicht 
 richtig funktionierten, beschloss ich nochmal FPM auszuprobieren.
 
 ### Mithilfe von FPM zum Ziel
 
-Mit FPM und etwas Zeit kam ich dann doch recht schnell voran, so dass ich einen funktionieren CLI-Befehl hatte, welcher
+Mit FPM und etwas Zeit kam ich dann doch recht schnell voran, sodass ich einen funktionieren CLI-Befehl hatte, welcher
 das RPM baute. Dieses konnte ich dann in meiner [CentOs Testbox](https://github.com/tommy-muehle/puppet-vagrant-boxes/releases/download/1.0.0/centos-6.6-x86_64.box){:target="_blank"} 
 auch erfolgreich installieren. :muscle:
 
@@ -44,7 +44,7 @@ Dabei sieht mein Anwendungsfall wie folgt aus:
 
 ### Mein Lösungsansatz
 
-Dabei findet hier meinen aktuellen Lösungsansatz. Hinweis vorab. Da wir bei uns ausschließlich CentOs 6.4 - 6.6 
+Hier mein aktueller Lösungsansatz. Vorher noch ein Hinweis. Da wir bei uns ausschließlich CentOs 6.4 - 6.6 
 einsetzen, erzeugt dieser ein RPM. Ein DEB wäre aber mit einer Type-Änderung auch möglich. (siehe mein Website-Beispiel)
 
 {% highlight xml %}
@@ -143,7 +143,7 @@ einsetzen, erzeugt dieser ein RPM. Ein DEB wäre aber mit einer Type-Änderung a
 </project>
 {% endhighlight %}
 
-Mein genutztes "after-install"-Skript mit den von Ant übermittelten Variablen sieht dabei wie
+Mein genutztes "after-install"-Skript, mit den von Ant übermittelten Variablen, sieht wie
 folgt aus:
 
 {% highlight bash %}
