@@ -178,7 +178,7 @@ aber bereits ein DEB Paket für das Deployment. Natürlich ist dies jedoch eine 
 ### Ausblick
 
 Wer nicht die Pakete händisch auf die Systeme übertragen und installieren möchte, kann natürlich auch einen
-eigenen Release-Server aufsetzen, von welchem sich die Applikations-Server die neuesten Versionen ziehen.
+eigenen [Repository-Server](http://wiki.centos.org/HowTos/CreateLocalRepos){:target="_blank"} aufsetzen, von welchem sich die Applikations-Server die neuesten Versionen ziehen.
 
 #### Links
 
