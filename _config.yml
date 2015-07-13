@@ -1,5 +1,5 @@
 # Site settings
-title: Tommy bloggt aus der IDE
+title: Tommy bloggt
 email: tommy-muehle@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Hallo, ich bin Tommy.
@@ -15,3 +15,7 @@ markdown: kramdown
 timezone: Europe/Berlin
 gems:
   - jemoji
+comments :
+  provider : disqus
+  disqus :
+    short_name : tommymuehle
