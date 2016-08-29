@@ -9,7 +9,7 @@ Als [Sebastian Bergmann](https://twitter.com/s_bergmann){:target="_blank"} vor e
 erwähnte er beiläufig, man könne doch als Resultat eines Builds der CI ein RPM oder DEB der Applikation auswerfen,
 welches dann zum Produktiv-System übertragen und installiert wird.
 
-Ein Thema, welches mich nicht so richtig losgelassen hat. Die Vorstellung unsere (Symfony2-) Applikationen 
+Ein Thema, welches mich nicht so richtig losgelassen hat. Die Vorstellung unsere (Symfony2-) Applikationen
 versioniert und geprüft zu packen und dann als eine Datei zu deployen, fande ich extrem spannend.
 
 Aktuell ist der Synchronisationsprozess und die Release-Nachbereitung bei uns doch noch etwas aufwändiger.
@@ -17,26 +17,26 @@ Aktuell ist der Synchronisationsprozess und die Release-Nachbereitung bei uns do
 ### Spannendes Thema
 
 In den letzten Tagen habe ich dazu ziemlich viel recherchiert und probiert.
-Erste Versuche mit [rpmbuild](http://www.rpm.org/max-rpm-snapshot/rpmbuild.8.html){:target="_blank"} und mit zahlreichen [Snippets](https://gist.github.com/catchamonkey/8575619f450fe4c94acd){:target="_blank"} 
+Erste Versuche mit [rpmbuild](http://www.rpm.org/max-rpm-snapshot/rpmbuild.8.html){:target="_blank"} und mit zahlreichen [Snippets](https://gist.github.com/catchamonkey/8575619f450fe4c94acd){:target="_blank"}
 und [Tutorials](http://www.sme-server.de/download/Howtos/RPM-Build/Beginners_Guide_Own_RPMs.htm){:target="_blank"} führten aber nicht so richtig zum Ziel.
 
-Vorab war ich bereits auf [FPM](https://github.com/jordansissel/fpm){:target="_blank"} - Effing Package Management gestoßen. 
+Vorab war ich bereits auf [FPM](https://github.com/jordansissel/fpm){:target="_blank"} - Effing Package Management gestoßen.
 Doch die vielen Optionen inkl. Support mehrerer Paket-Typen je nach Distribution befand ich zu Beginn viel zu viel,
 sodass ich davon Abstand genommen hatte. :weary:
 
-Da die Versuche mit meinem Spec-File und meiner simplen Symfony Konsolen-App dann aber auch nicht 
+Da die Versuche mit meinem Spec-File und meiner simplen Symfony Konsolen-App dann aber auch nicht
 richtig funktionierten, beschloss ich nochmal FPM auszuprobieren.
 
 ### Mithilfe von FPM zum Ziel
 
 Mit FPM und etwas Zeit kam ich dann doch recht schnell voran, sodass ich einen funktionieren CLI-Befehl hatte, welcher
-das RPM baute. Dieses konnte ich dann in meiner [CentOs Testbox](https://github.com/tommy-muehle/puppet-vagrant-boxes/releases/download/1.0.0/centos-6.6-x86_64.box){:target="_blank"} 
+das RPM baute. Dieses konnte ich dann in meiner [CentOs Testbox](https://github.com/tommy-muehle/puppet-vagrant-boxes/releases/download/1.0.0/centos-6.6-x86_64.box){:target="_blank"}
 auch erfolgreich installieren. :muscle:
 
 Jetzt musste das Ganze nur noch irgendwie auf den Jenkins bzw. ins [Ant](http://ant.apache.org/){:target="_blank"}.
 Dabei sieht mein Anwendungsfall wie folgt aus:
 
-* Auschecken einer bestimmten Version der Applikation auf Basis eines Git-Tags 
+* Auschecken einer bestimmten Version der Applikation auf Basis eines Git-Tags
 * Abhängigkeiten via Composer laden
 * Qualitätssicherung durchführen
 * Deployment und Integration
@@ -44,14 +44,14 @@ Dabei sieht mein Anwendungsfall wie folgt aus:
 
 ### Mein Lösungsansatz
 
-Hier mein aktueller Lösungsansatz. Vorher noch ein Hinweis. Da wir bei uns ausschließlich CentOs 6.4 - 6.6 
+Hier mein aktueller Lösungsansatz. Vorher noch ein Hinweis. Da wir bei uns ausschließlich CentOs 6.4 - 6.6
 einsetzen, erzeugt dieser ein RPM. Ein DEB wäre aber mit einer Type-Änderung auch möglich. (siehe mein Website-Beispiel)
 
 {% highlight xml %}
 <project default="build" basedir="./">
 
     <property environment="env"/>
-    
+
     <property name="php" value="/usr/bin/php56"/>
     <property name="php_ini_file" value="/opt/remi/php56/root/etc/php.ini"/>
 
@@ -137,7 +137,7 @@ einsetzen, erzeugt dieser ein RPM. Ein DEB wäre aber mit einer Type-Änderung a
 
             <!-- Path to the source-files. Note: This path are combined with prefix (see above). -->
             <arg value="source"/>
-            
+
         </exec>
     </target>
 </project>
@@ -171,7 +171,7 @@ noch automatisch aus dem Git gezogen werden. Weiterhin müssten die Skripte (bef
 
 ### Live-Beispiel
 
-Für meine eigene Website auf Basis von [Silex](http://silex.sensiolabs.org/){:target="_blank"} erzeuge ich 
+Für meine eigene Website auf Basis von [Silex](http://silex.sensiolabs.org/){:target="_blank"} erzeuge ich
 [hiermit](https://github.com/tommy-muehle/tommy-muehle.de/blob/master/build/release.xml){:target="_blank"}
 aber bereits ein DEB Paket für das Deployment. Natürlich ist dies jedoch eine sehr simple Applikation.
 
@@ -183,4 +183,4 @@ eigenen [Repository-Server](http://wiki.centos.org/HowTos/CreateLocalRepos){:tar
 #### Links
 
 * [[FPM]](https://github.com/jordansissel/fpm){:target="_blank"}
-* [[Beispiel]](https://github.com/tommy-muehle/tommy-muehle.de/blob/master/build/release.xml){:target="_blank"}
+* [[Beispiel]](https://github.com/tommy-muehle/tommy-muehle.io/blob/48e031b69f8963863a4721d1de300d2e58e06e35/release.xml){:target="_blank"}
