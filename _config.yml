@@ -1,6 +1,7 @@
 # Basic
 name:               "Tommy bloggt"
 description:        "My personal developer blog around PHP and other programming stuff."
+timezone:           Europe/Berlin
 
 url:                "//tommy-muehle.github.io"
 author:             "Tommy Muehle"
