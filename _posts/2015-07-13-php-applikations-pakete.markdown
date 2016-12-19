@@ -1,8 +1,7 @@
 ---
 layout: post
-title:  "PHP Applikations-Pakete"
-date:   2015-07-13 12:10:00
-categories: PHP FPM SYMFONY
+title:  "PHP application packages"
+introduction: "How to build and distribute PHP application packages. (German)"
 ---
 
 Als [Sebastian Bergmann](https://twitter.com/s_bergmann){:target="_blank"} vor ein paar Tagen bei uns war,

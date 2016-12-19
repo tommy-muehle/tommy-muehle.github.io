@@ -1,10 +1,9 @@
 ---
 layout: post
 title:  "Never implement tests in abstract test cases"
-date:   2016-09-06 20:01:00
-categories: PHP TEST
+introduction: "My opinion to force tests over multiple test-suites or cases."
 ---
- 
+
 Yesterday i saw an abstract test case with concrete tests for all child test classes.
 Something like this:
 
@@ -23,10 +22,10 @@ abstract class MyTestCase extends \PHPUnit_Framework_TestCase
     }
 }
 
-class RealTest extends MyTestCase 
+class RealTest extends MyTestCase
 {
     // further specific tests with $this->object
-    ... 
+    ...
 }
 
 ```

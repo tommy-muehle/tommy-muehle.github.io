@@ -1,10 +1,12 @@
-# Basic
-name:               "Tommy bloggt"
-description:        "My personal developer blog around PHP and other programming stuff."
-timezone:           Europe/Berlin
+# Setup
+title:               Tommy bloggt
+tagline:             'Some things that matter to me'
+description:         'My personal developer blog around PHP and other programming stuff.'
+url:                 //tommy-muehle.github.io
+baseurl:             ''
+paginate:            1
+permalink:           pretty
 
-url:                "//tommy-muehle.github.io"
-author:             "Tommy Muehle"
 twitter:
   username:         "tommy_muehle"
 social:
@@ -12,37 +14,12 @@ social:
     - https://github.com/tommy-muehle
     - https://www.xing.com/profile/Tommy_Muehle
 
-# URL
-baseurl:            ""
-#baseurl:            "" #For Root Domain
-permalink:          /:year/:month/:day/:title/
-
-# Markdown
-markdown:           kramdown
-
-# Navigation
-nav:
-  #- name:           "About"
-  #  href:           "//tommy-muehle.github.io/about"
-
-# Sass
-sass:
-  style:            :compressed
-
-# Scopes
-defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
-    values:
-      layout:       "post"
+# Custom vars
+version:             2.0.0
 
 gems:
-  - jekyll-seo-tag
+ - jekyll-paginate
+ - jekyll-seo-tag
+ - jekyll-twitter-plugin
+
+markdown:            kramdown
