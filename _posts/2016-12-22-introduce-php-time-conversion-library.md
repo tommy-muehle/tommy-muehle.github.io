@@ -5,7 +5,7 @@ introduction: "An quick introduction to my last created library to convert, comp
 ---
 
 Some time ago i saw this tweet from [@dantleech](https://twitter.com/dantleech).
-{% twitter https://twitter.com/dantleech/status/798842090482331648 %}
+[![https://twitter.com/dantleech/status/798842090482331648](/public/images/tweet_798842090482331648.png){:width="600px"}](https://twitter.com/dantleech/status/798842090482331648)
 
 I know a library to convert some things called "php-conversion" from Christoffer Niska that can 
 be found [here](https://github.com/crisu83/php-conversion). But this library has more than 
