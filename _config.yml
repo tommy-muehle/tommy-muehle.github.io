@@ -15,7 +15,7 @@ social:
     - https://www.xing.com/profile/Tommy_Muehle
 
 # Custom vars
-version:             2.1.0
+version:             2.2.0
 
 gems:
  - jekyll-paginate
