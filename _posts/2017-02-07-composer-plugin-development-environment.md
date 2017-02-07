@@ -8,7 +8,7 @@ I created several Composer [plugins](https://github.com/tommy-muehle/composer-to
 Currently i'm working on the [plugin for PHIVE](https://github.com/phar-io/composer-plugin).
 
 So sometimes people ask me, how I develop and test a plugin or a Composer script.
-So I released a [small development environment](https://github.com/tommy-muehle/php-composer-plugin-devenv) powered by Docker and Docker-Compose with which you can
+So I released a [small development environment](https://github.com/tommy-muehle/php-composer-plugin-devenv) powered by Docker and Docker-Compose which you can
 use to develop your own Composer extension.
 
 With this "dev-env" you don't make your local Composer environment dirty and you don't need a
