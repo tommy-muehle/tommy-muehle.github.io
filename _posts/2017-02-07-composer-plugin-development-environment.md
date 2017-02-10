@@ -4,7 +4,7 @@ title:  "A Composer plugin development environment"
 introduction: "Introduce my personal Composer plugin/script development environment."
 ---
 
-I created several Composer [plugins](https://github.com/tommy-muehle/composer-tool-installer-plugin) and [script's](https://github.com/tommy-muehle/tooly-composer-script) in the last time.
+I created several Composer [plugins](https://github.com/tommy-muehle/composer-tool-installer-plugin) and [script's](https://github.com/tommy-muehle/tooly-composer-script) recently.
 Currently i'm working on the [plugin for PHIVE](https://github.com/phar-io/composer-plugin).
 
 So sometimes people ask me, how I develop and test a plugin or a Composer script.
@@ -12,15 +12,15 @@ So I released a [small development environment](https://github.com/tommy-muehle/
 use to develop your own Composer extension.
 
 With this "dev-env" you don't make your local Composer environment dirty and you don't need a
-[further local Git repository and move some tags around](http://stackoverflow.com/questions/22935567/test-and-debug-composer-plugins).
+[further local bare Git repository and move some Git tags around](http://stackoverflow.com/questions/22935567/test-and-debug-composer-plugins).
 
-The only requirement is to be minimal familiar with Docker and Docker-Compose.
+The only requirement is to be minimal familiarity with Docker and Docker-Compose.
 
 ## How it works
 
 The [repository](https://github.com/tommy-muehle/php-composer-plugin-devenv) contains two container's. One for Composer and one for the plugin.
 Both based on [Alpine Linux](https://alpinelinux.org/) and includes PHP 7.1 over CLI. So they are really small and use minimal disk space.
-You can found every Docker image in the appropriate directory.
+You can find every Docker image in the appropriate directory.
 
 I added also a [dummy plugin](https://github.com/tommy-muehle/php-composer-plugin-devenv/tree/master/plugin/src) to see the process directly in action.
 So after you checked out the repository via Git and built the container's via
