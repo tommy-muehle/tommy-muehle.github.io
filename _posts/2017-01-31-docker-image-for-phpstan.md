@@ -1,29 +1,29 @@
 ---
 layout: post
 title:  "Docker image for PHPStan"
-introduction: "Some day's ago i created a Docker image to check my older PHP 5.6 projects with the great PHPStan."
+introduction: "Some days ago I created a Docker image to check my older PHP 5.6 projects with the great PHPStan."
 ---
 
-Today i updated [my implementation](https://github.com/tommy-muehle/docker-phpstan) to differentiate between releases  
+Today I updated [my implementation](https://github.com/tommy-muehle/docker-phpstan) to differentiate between releases  
 and dev-master. 
 
-Currently the latest release for PHPStan are "0.6.3". This is now available
+Currently the latest release for PHPStan is "0.6.3". It is now available
 via the new Docker image tag **0.6**.
 
-So you can decide between the latest PHPStan version or one of the current release branch.
-Also tests with Travis CI are now exist.
+So you can decide between the latest PHPStan version or one of the current release branches.
+Also there are tests with Travis CI.
 
 The result of this can be found here:
 [https://hub.docker.com/r/tommymuehle/docker-phpstan](https://hub.docker.com/r/tommymuehle/docker-phpstan/)
 
-The images are built daily at night. So you get always the latest commit on dev-master and the last release in the 0.6 branch by day.
+The images are built daily at night. So you always get the latest commit on dev-master and the latest release in the 0.6 branch by day.
 
 ## Use alias for short command option
 
-For a better developer experience you can use an alias to type a short command that are expanded out into a much 
+For a better developer experience you can use an alias to type a short command that is expanded into a much 
 longer command. 
 
-In my ~/.zshrc file (though you might have a ~/.bashrc or ~/.profile or something similar) i created a new alias:
+In my ~/.zshrc file (though you might have a ~/.bashrc, ~/.profile or something similar) I created a new alias:
 
 ```
 alias phpstan="docker run -v $PWD:/app --rm tommymuehle/docker-phpstan"
