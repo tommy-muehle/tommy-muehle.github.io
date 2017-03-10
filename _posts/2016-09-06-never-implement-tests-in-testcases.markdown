@@ -32,7 +32,7 @@ class RealTest extends MyTestCase
 
 ## A better way
 
-But if you want all child test classes to be executed one or more specific test(s),
+But if you want that all child test classes execute one or more specific test(s),
 implement abstract tests like this:
 
 ```
