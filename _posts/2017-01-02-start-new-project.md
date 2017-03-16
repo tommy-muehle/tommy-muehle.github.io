@@ -4,14 +4,14 @@ title:  "Starting my new project tmy.li"
 introduction: "I'm starting a new project with different aspects for a proof of concept."
 ---
 
-Since the last few day's i'm starting a new private project which will be
-later available on [https://tmy.li](https://tmy.li). I also planned a blog 
-series about.
+For the last few days I've been starting a new private project which will be
+available on [https://tmy.li](https://tmy.li). I also planned a blog 
+series about it.
 
-And yes, it will be a further url shortener. But [bit.ly](https://bit.ly) 
-and others does not have to be afraid.
+And yes, it will be another url shortener. But [bit.ly](https://bit.ly) 
+and others will not have to be afraid.
 
-It's a learning/proof of concept project with which i'm pursue some goals.  
+It's a learning/proof of concept project with which I'm pursuing some goals.  
 My personal main goals are:
 
 * use PHP 7.1
@@ -22,8 +22,10 @@ My personal main goals are:
 * complete client rendering for the frontend with [ReactJS](https://facebook.github.io/react/)
 * using [PHP-PM](https://github.com/php-pm/php-pm) with NGINX for high-performance 
 
-But with the result, i will be create some links which are **one** character
-shorter as by bit.ly for example:
+As for the result, I want to create some links which are **one** character
+shorter than the links of bit.ly. 
+
+For example:
 
 ```
 http://tmy.li/nk/foo  -> 20 chars
@@ -34,12 +36,12 @@ http://bit.ly/2ifj8vn -> 21 chars
 
 I planned this project in four parts. 
 
-At first i'm initialize the project and create a dummy Symfony application.
+At first I will initialize the project and create a dummy Symfony application.
 The second part is about the infrastructure with Docker and Docker-Compose and how 
-the services comes together.
+the services are coming together.
 
 Part three, the main part, is the real application implementation with front- and backend (API).
 The last part is the PHP-PM integration.
 
-After finishing a part i will be create a new blog post 
-about this step.
+After finishing each step, I'm going to create a new blog post 
+about it.
